@@ -1,0 +1,39 @@
+import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.edinson.forestfruit.service.CajeroServicio;
+import com.edinson.forestfruit.service.TransaccionService;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.web.reactive.server.WebTestClient;
+
+@ExtendWith(MockitoExtension.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureMockMvc
+class CajeroAutomaticoControllerIntegrationTest {
+
+    @Mock
+    private TransaccionService transaccionService;
+
+    @InjectMocks
+    private CajeroServicio cajeroServicio;
+
+    @Test
+    void obtenerSaldoTest() {
+        // Simulamos que el servicio devuelve un saldo de 5000
+        when(transaccionService.obtenerSaldo()).thenReturn(5000);
+
+        // Ejecutamos la prueba
+        int saldo = cajeroServicio.obtenerSaldo();
+
+        // Verificamos que el saldo es el esperado
+        assertEquals(5000, saldo);
+    }
+}
