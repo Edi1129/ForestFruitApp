@@ -1,0 +1,7 @@
+forest-fruit/
+│── src/
+│   ├── main/
+│   │   ├── java/com/edinson/forestfruit/...
+│   │   ├── resources/
+│   │       ├── application.properties
+│── pom.xml  <-- Asegúrate de que este archivo existe
