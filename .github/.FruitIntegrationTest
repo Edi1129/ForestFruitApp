@@ -1,0 +1,29 @@
+package com.edinson.forestfruit;
+
+import com.edinson.forestfruit.model.Fruit;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.reactive.server.WebTestClient;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class FruitIntegrationTets {
+
+  @Autowired
+  private WebTestClient webTestClient;
+
+  @Test
+  void testGetFruitByName() {
+      webTestClient.get()
+             .uri("/api/fruits/Manzana")
+             .exchange()
+             .expectBody(Fruit.class)
+             .value(fruit -> {
+                assert fruit.getNombre().equals("Manzana");
+
+             });
+
+    }
+             
+}
+

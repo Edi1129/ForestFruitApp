@@ -1,6 +1,32 @@
-Thank you for using the Oracle JDK.
-The license for this software can be found in the LICENSE file.
+# Documentacion del proceso de automatizacion de Prueva
+## el Objetivo 
 
-Information on installing, configuring, and running this program is available on https://java.com/readme
+Implementar pruebas automatizadas para una applicacion Spring Boot con un endpoint Rest
 
-Documentation on the Java SE Platform can be found on https://docs.oracle.com/java
+## procesos 
+# se crea una clase FruitService  con un endpoint Get 
+# se crea una clase FruitController java 
+# se agrego la logica del negocio en FruitController 
+# se configuraron las dependencias de pruebas en ´ Pom.xml´
+# se desarrollaron dos pruebas unitarias para el servicio
+# se implemento una prueba de integracion  con WebTestClient
+# las pruebas se ejecutaron correctamente pero presentaron fallas en la terminal y el IDE
+
+# se encontraron errores 
+- x NullPointerExpresion al no enviar parametros ´nombre´
+ - se intento solucional por el valor del defecto pero no se fue posible ya que hay fallas en el sistema 
+   se intento con Intelllij hasta que se implemento con Visual Studio Code paero todavia hay fallas
+
+   # Herramientas utilizadas 
+   # - Java 17 
+   # - spring Boot
+   # - Junit 5
+   # - WenTestClient
+   # -Mave
+   # - Git - GitHub
+
+   # se capturas imagenes de proceso del Proyecto 
+    las cuales se encuentran en la carpeta de capturas 
+
+    # se corrigen los errores del codigo mostrando solides 
+    

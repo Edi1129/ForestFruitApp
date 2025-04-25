@@ -1,0 +1,16 @@
+<dependencies>
+
+    <!--Spring Boot Web-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactid>spring-boot-starter-web</artifactid>
+    </dependency>
+
+    <!--Spring Boot Test (JUnit,Mockito,etc.)-->
+    <dependency>
+        <groupld>org.springframework.boot</groupld><!--Estaba mal escrito como 'book' -->
+        <artifactid>spring-boot-starter-test</artifactid>
+        <scope>test</scope>
+    </dependency>
+
+</dependencies>
